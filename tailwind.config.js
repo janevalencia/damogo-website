@@ -1,16 +1,35 @@
+// Font family support for Tailwind CSS with @next/font plugin.
+const { fontFamily } = require('tailwindcss/defaultTheme')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx}',
-    './src/components/**/*.{js,ts,jsx,tsx}',
-    './src/app/**/*.{js,ts,jsx,tsx}',
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontWeight: {
+      thin: "300",
+      normal: "400",
+      semibold: "500",
+      bold: "700",
+    },
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        "primary-blue": "#00A3F4", // Soft Blue
+        "primary-yellow": "#FFBB00", // Soft Yellow
+        "primary-green": "#009673", // Soft Green
+        "secondary-blue": "#005179", // Dark Blue
+        "secondary-grey": "#5A5A5A", // Grey Text
+        "secondary-green": "#005844", // Dark Green
+      },
+      fontFamily: {
+        primary: [`var(--font-primary)`, ...fontFamily.sans], // Set default font to Noto-Sans.
+      },
+      fontSize: {
+        "lg-title": "4.5rem", // 72px.
+        "normal-text": "1.125rem", // 18px.
+        "small-text": "0.875rem", // 14px.
+        "subheading": "2.25rem", // 36px.
       },
     },
   },

@@ -1,0 +1,3 @@
+import { gql } from "graphql-request";
+
+// Place your graphql query here ...
