@@ -19,7 +19,7 @@ const SEO = ({ seo }) => {
             }}
             additionalMetaTags={[
                 {
-                    property: "keywords",
+                    name: "keywords",
                     content: seo.focusKeywords,
                 },
             ]}
