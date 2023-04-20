@@ -1,15 +1,20 @@
 import { siteConfig } from "@/utils/_siteConfig"
+import { locales } from "@/libs/_locales";
+
+import { useRouter } from "next/router";
 import Image from 'next/image'
 
 const Footer = () => {
-    const siteTitle = siteConfig.siteMetadata.title;
+    const router = useRouter()
+
+    const siteTitle = siteConfig.siteMetadata.title
 
     return (
         <footer className="container py-20">
             <h3 className="site-logo">{siteTitle}</h3>
-            <section className="flex flex-col-reverse md:flex-row justify-between">
+            <div className="flex flex-col-reverse md:flex-row justify-between">
                 {/* Nav & Contact */}
-                <div className="flex flex-col lg:flex-row lg:gap-36">
+                <section className="flex flex-col lg:flex-row lg:gap-36">
                     <div>
                         <h4 className="footer-title">Ikuti kami</h4>
                         <nav>
@@ -46,10 +51,10 @@ const Footer = () => {
                             <p>Sat & Sun 9:30 am - 6:00 pm</p>
                         </div>
                     </div>
-                </div>
+                </section>
 
                 {/* Download App */}
-                <div>
+                <section>
                     <h4 className="footer-title">Download the app</h4>
                     <div className="flex flex-wrap">
                         <Image
@@ -68,8 +73,19 @@ const Footer = () => {
                             priority
                         />
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
+
+            {/* Language Switch - NEEDS REFACTORING */}
+            <div>
+                <button onClick={() => {
+                    router.push(router.asPath, router.asPath, { locale: locales[0].value })
+                }}>{locales[0].label}</button>
+                <br />
+                <button onClick={() => {
+                    router.push(router.asPath, router.asPath, { locale: locales[1].value })
+                }}>{locales[1].label}</button>
+            </div>
         </footer>
     );
 }
