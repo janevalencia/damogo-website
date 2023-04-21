@@ -78,13 +78,15 @@ const Footer = () => {
 
             {/* Language Switch - NEEDS REFACTORING */}
             <div>
-                <button onClick={() => {
-                    router.push(router.asPath, router.asPath, { locale: locales[0].value })
-                }}>{locales[0].label}</button>
-                <br />
-                <button onClick={() => {
-                    router.push(router.asPath, router.asPath, { locale: locales[1].value })
-                }}>{locales[1].label}</button>
+                <h4 className="footer-title">Language</h4>
+                {locales.map((locale, index) => (
+                    <button
+                        key={locale.label}
+                        onClick={() => router.push(router.asPath, router.asPath, { locale: locale.value })}
+                    >
+                        {locale.label} {index === 0 && " | "}
+                    </button>
+                ))}
             </div>
         </footer>
     );
