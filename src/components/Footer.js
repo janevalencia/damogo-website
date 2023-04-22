@@ -1,13 +1,30 @@
 import { siteConfig } from "@/utils/_siteConfig"
 import { locales } from "@/libs/_locales";
 
+import { useState } from "react";
 import { useRouter } from "next/router";
 import Image from 'next/image'
 
 const Footer = () => {
     const router = useRouter()
 
+    const [activeLang, setActiveLang] = useState('en');
+
     const siteTitle = siteConfig.siteMetadata.title
+
+    const handleLang = (locale) => {
+        // Switch language.
+        router.push(router.asPath, router.asPath, { locale: locale.value })
+
+        // Update active language state.
+        setActiveLang(locale.value)
+    }
+
+    // Styling.
+    const langStyling = {
+        active: 'font-bold text-small-text hover:underline',
+        inactive: 'font-normal text-small-text hover:underline',
+    }
 
     return (
         <footer className="container py-20">
@@ -76,13 +93,14 @@ const Footer = () => {
                 </section>
             </div>
 
-            {/* Language Switch - NEEDS REFACTORING */}
+            {/* Language Switch */}
             <div>
-                <h4 className="footer-title">Language</h4>
+                <h4 className="footer-title">Languages</h4>
                 {locales.map((locale, index) => (
                     <button
                         key={locale.label}
-                        onClick={() => router.push(router.asPath, router.asPath, { locale: locale.value })}
+                        onClick={() => handleLang(locale)}
+                        className={activeLang === locale.value ? langStyling.active : langStyling.inactive}
                     >
                         {locale.label} {index === 0 && " | "}
                     </button>
