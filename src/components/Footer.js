@@ -1,4 +1,4 @@
-import { siteConfig } from "@/utils/_siteConfig"
+import { siteConfig } from "@/libs/_siteConfig"
 import { locales } from "@/libs/_locales";
 
 import { useState } from "react";
