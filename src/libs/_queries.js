@@ -12,6 +12,7 @@ export const pageQuery = gql`
                             text
                             path
                             externalUrl
+                            theme
                         }
                     }
                     image {
@@ -29,12 +30,14 @@ export const pageQuery = gql`
                             text
                             path
                             externalUrl
+                            theme
                         }
                     }
                     images {
                         url
                         order
                     }
+                    theme
                 }
             }
             seo {
