@@ -6,8 +6,6 @@ import SEO from '@/components/Seo'
 import { parsePageData } from '@/utils/mdx/_parsePageData'
 
 export default function Home({ page }) {
-  console.log(page)
-
   return (
     <>
       <SEO seo={page.seo} />

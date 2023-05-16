@@ -21,6 +21,7 @@ module.exports = {
         "secondary-blue": "#005179", // Dark Blue
         "secondary-grey": "#5A5A5A", // Grey Text
         "secondary-green": "#005844", // Dark Green
+        "gradient-blue": "#DFF4FF", // Light Blue
       },
       fontFamily: {
         primary: [`var(--font-primary)`, ...fontFamily.sans], // Set default font to Noto-Sans.
