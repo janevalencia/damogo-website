@@ -1,5 +1,6 @@
 import { MDXRemote } from 'next-mdx-remote';
 import Image from 'next/image';
+import Button from './Button';
 
 const Hero = ({ hero }) => {
     return (
@@ -11,6 +12,11 @@ const Hero = ({ hero }) => {
                         <MDXRemote {...hero.title.mdx} />
                     </h1>
                     <p>{hero.description}</p>
+                    <div className='flex flex-row gap-6 mt-10'>
+                        {hero.ctaButton && hero.ctaButton.map((btn) => (
+                            <Button key={btn.text} {...btn} />
+                        ))}
+                    </div>
                 </article>
                 <Image
                     src={hero.image.url}
