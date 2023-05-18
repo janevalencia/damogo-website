@@ -1,10 +1,9 @@
-import { NextSeo } from "next-seo";
-import { defaultUrl } from "../../next-seo.config";
+import { NextSeo } from 'next-seo';
+import { defaultUrl } from '../../next-seo.config';
 
-import { useRouter } from "next/router";
+import { useRouter } from 'next/router';
 
 const SEO = ({ seo }) => {
-    
     // To get the current page's router path.
     const router = useRouter();
 
@@ -14,12 +13,21 @@ const SEO = ({ seo }) => {
             description={seo.metaDescription}
             openGraph={{
                 title: seo.ogTitle ? seo.ogTitle : seo.metaTitle,
-                description: seo.ogDescription ? seo.ogDescription : seo.metaDescription,
+                description: seo.ogDescription
+                    ? seo.ogDescription
+                    : seo.metaDescription,
                 url: defaultUrl + router.asPath,
+                images: [
+                    {
+                        url: '/logo.svg',
+                        width: 113,
+                        height: 25,
+                    },
+                ],
             }}
             additionalMetaTags={[
                 {
-                    name: "keywords",
+                    name: 'keywords',
                     content: seo.focusKeywords,
                 },
             ]}
@@ -27,6 +35,6 @@ const SEO = ({ seo }) => {
             nofollow={seo.noFollow}
         />
     );
-}
+};
 
 export default SEO;

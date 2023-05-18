@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { siteConfig } from "@/libs/_siteConfig"
 import { useReducer } from "react"
 
@@ -28,7 +29,14 @@ const Header = () => {
 
     return (
         <header className="container flex flex-wrap md:flex-row justify-between py-8">
-            <h3 className="site-logo">{siteTitle}</h3>
+            <span>
+                <Image 
+                    src="/logo.svg"
+                    alt={siteTitle}
+                    width={113}
+                    height={25}
+                />
+            </span>
             <nav>
                 <ul className="flex flex-row gap-12 text-normal-text font-semibold">
                     <li
