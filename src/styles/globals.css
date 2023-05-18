@@ -37,6 +37,10 @@
         margin-inline: auto;
     }
 
+    .ctaBtn {
+        @apply rounded-button px-8 py-3 min-w-[192px];
+    }
+
     .site-logo {
         @apply font-bold text-primary-blue text-xl;
     }
