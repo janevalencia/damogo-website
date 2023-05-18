@@ -10,7 +10,7 @@ const Button = ({ text, path, externalUrl, theme }) => {
 
     return (
         <button className={btnTheme[theme]}>
-            <a href={path ? path : externalUrl}>{text}</a>
+            <a href={externalUrl ? externalUrl : `#${path}`}>{text}</a>
         </button>
     );
 };

@@ -4,15 +4,15 @@ import Button from './Button';
 
 const Hero = ({ hero }) => {
     return (
-        <section id='hero' className='relative pt-28 pb-8'>
+        <section id='hero' className='relative lg:pt-28 pb-8'>
             {/* Hero content */}
-            <div className='container flex justify-between items-center gap-20'>
-                <article className='flex-initial w-[500px]'>
+            <div className='container flex flex-col gap-10 md:flex-row md:justify-between items-center md:gap-20'>
+                <article className='w-full lg:w-[500px]'>
                     <h1 className='prose-strong:text-primary-green'>
                         <MDXRemote {...hero.title.mdx} />
                     </h1>
                     <p>{hero.description}</p>
-                    <div className='flex flex-row gap-6 mt-10'>
+                    <div className='flex flex-col lg:flex-row gap-6 mt-10'>
                         {hero.ctaButton && hero.ctaButton.map((btn) => (
                             <Button key={btn.text} {...btn} />
                         ))}
@@ -23,7 +23,7 @@ const Hero = ({ hero }) => {
                     alt='Makan Cerdas Hero Image'
                     width={484}
                     height={326}
-                    className='relative left-[5%]'
+                    className='relative lg:left-[5%]'
                 />
             </div>
             {/* Overlay */}

@@ -38,7 +38,7 @@
     }
 
     .ctaBtn {
-        @apply rounded-button px-8 py-3 min-w-[192px];
+        @apply rounded-button px-8 py-3 min-w-full lg:min-w-[192px];
     }
 
     .site-logo {
