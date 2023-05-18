@@ -1,10 +1,12 @@
-# Makan Cerdas Website
+# DamoGO Website
 
-Makan Cerdas is a mock-up single landing page created for a startup client running its business in educating and solving problem of food waste in SEA countries.
+This project is a mock-up single landing page developed for a startup company running its business in educating and solving problem of food waste in SEA countries.
 
 All assets used in this landing page is managed in [Hygraph](https://app.hygraph.com/3d9ca503cbd24a5e9f2c51780cc59825/master), a GraphQL powered Headless CMS (Content Management System).
 
-**Disclaimer:** I do not own any of the design. This project is a mock-up of the original design. IP rights is owned by the client, DamoGo.
+The proposed technical solution and architecture of this project is based on [Next.js](https://nextjs.org/), a React full-stack framework. This project is also integrated with [TailwindCSS](https://tailwindcss.com/), a CSS utility framework.
+
+**Disclaimer:** I do not own any of the design and brand of this website. This project is a mock-up of the original design. The original design and brand is owned by the company, DamoGo.
 
 ## Feature
 
@@ -17,7 +19,7 @@ All assets used in this landing page is managed in [Hygraph](https://app.hygraph
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 Pre-requisite:
-- Latest node installed (Recommended: LTS version)
+- Latest LTS node installed
 
 First, run the development server:
 
