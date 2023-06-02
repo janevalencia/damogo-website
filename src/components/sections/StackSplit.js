@@ -22,7 +22,7 @@ const StackSplit = ({
                 >
                     {smallHeading}
                 </h3>
-                <h2 className='text-center'>{sectionTitle}</h2>
+                <h2 className={'text-center ' + sectionTheme.title[theme]}>{sectionTitle}</h2>
                 <div className='flex flex-col items-center mt-24 gap-20 lg:flex-row lg:justify-between lg:gap-11'>
                     <div className='relative flex flex-col items-center w-2/5'>
                         <Image
