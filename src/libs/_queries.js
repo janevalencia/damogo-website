@@ -3,7 +3,6 @@ import { gql } from "graphql-request"
 export const pageQuery = gql`
     query PageQuery($slug: String!, $locale: Locale!) {
         page(where: {slug: $slug}, locales: [$locale]) {
-            __typename
             hero: heroSection {
                 ... on Hero {
                     __typename
@@ -23,8 +22,8 @@ export const pageQuery = gql`
                 }
             }
             sections {
+                __typename
                 ... on Section {
-                    __typename
                     smallHeading
                     sectionTitle
                     sectionDescription
