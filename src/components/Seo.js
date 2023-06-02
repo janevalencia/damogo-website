@@ -3,19 +3,25 @@ import { defaultUrl } from '../../next-seo.config';
 
 import { useRouter } from 'next/router';
 
-const SEO = ({ seo }) => {
+const SEO = ({
+    metaTitle,
+    metaDescription,
+    focusKeywords,
+    ogTitle,
+    ogDescription,
+    noIndex,
+    noFollow,
+}) => {
     // To get the current page's router path.
     const router = useRouter();
 
     return (
         <NextSeo
-            title={seo.metaTitle}
-            description={seo.metaDescription}
+            title={metaTitle}
+            description={metaDescription}
             openGraph={{
-                title: seo.ogTitle ? seo.ogTitle : seo.metaTitle,
-                description: seo.ogDescription
-                    ? seo.ogDescription
-                    : seo.metaDescription,
+                title: ogTitle ? ogTitle : metaTitle,
+                description: ogDescription ? ogDescription : metaDescription,
                 url: defaultUrl + router.asPath,
                 images: [
                     {
@@ -28,11 +34,11 @@ const SEO = ({ seo }) => {
             additionalMetaTags={[
                 {
                     name: 'keywords',
-                    content: seo.focusKeywords,
+                    content: focusKeywords,
                 },
             ]}
-            noindex={seo.noIndex}
-            nofollow={seo.noFollow}
+            noindex={noIndex}
+            nofollow={noFollow}
         />
     );
 };

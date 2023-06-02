@@ -1,17 +1,11 @@
 import client from '@/libs/_hygraph'
 import { pageQuery } from '@/libs/_queries'
-
-import Hero from '@/components/Hero'
-import SEO from '@/components/Seo'
 import { parsePageData } from '@/utils/mdx/_parsePageData'
 
+import { PageLayout } from '@/components/layout'
+
 export default function Home({ page }) {
-  return (
-    <>
-      <SEO seo={page.seo} />
-      <Hero hero={page.hero} />
-    </>
-  )
+  return <PageLayout {...page} />
 }
 
 export async function getStaticProps({ locale }) {
