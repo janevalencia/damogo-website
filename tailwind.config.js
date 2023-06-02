@@ -11,6 +11,9 @@ module.exports = {
             semibold: '500',
             bold: '700',
         },
+        fontFamily: {
+            primary: [`var(--font-primary)`, ...fontFamily.sans], // Set default font to Noto-Sans.
+        },
         extend: {
             boxShadow: {
                 button: '0px 20px 30px -15px',
@@ -26,15 +29,13 @@ module.exports = {
                 'secondary-grey': '#5A5A5A', // Grey Text
                 'secondary-green': '#005844', // Dark Green
                 'gradient-blue': '#DFF4FF', // Light Blue
-            },
-            fontFamily: {
-                primary: [`var(--font-primary)`, ...fontFamily.sans], // Set default font to Noto-Sans.
+                'primary-grey': '#5A5A5A', // Neutral Grey Text
             },
             fontSize: {
                 'lg-title': '4.5rem', // 72px.
+                'subheading': '2.25rem', // 36px.
                 'normal-text': '1.125rem', // 18px.
                 'small-text': '0.875rem', // 14px.
-                subheading: '2.25rem', // 36px.
             },
         },
     },

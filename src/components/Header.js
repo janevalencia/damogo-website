@@ -46,7 +46,7 @@ const Header = () => {
     const siteTitle = siteConfig.siteMetadata.title;
 
     return (
-        <header className={isScrolled ? 'fixed w-full py-8 bg-white border-b z-10' : 'fixed w-full py-8'}>
+        <header className={isScrolled ? 'fixed w-full py-8 bg-white border-b z-10' : 'w-full py-8'}>
             <div className='container flex flex-wrap justify-between gap-8'>
                 <span>
                     <Image
