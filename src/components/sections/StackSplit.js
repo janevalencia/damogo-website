@@ -1,5 +1,7 @@
 import { MDXRemote } from 'next-mdx-remote';
 import Image from 'next/image';
+
+import Button from '@/components/Button';
 import { sectionTheme } from '@/libs/_theme';
 
 const StackSplit = ({
@@ -18,7 +20,7 @@ const StackSplit = ({
                 {smallHeading}
             </h3>
             <h2 className='text-center'>{sectionTitle}</h2>
-            <div className='flex flex-col items-center mt-24 gap-20 md:flex-row md:justify-between md:gap-11'>
+            <div className='flex flex-col items-center mt-24 gap-20 lg:flex-row lg:justify-between lg:gap-11'>
                 <div className='relative flex flex-col items-center w-2/5'>
                     <Image
                         src='/images/bg-circle.png'
@@ -35,8 +37,16 @@ const StackSplit = ({
                         />
                     </div>
                 </div>
-                <div className={'font-normal text-2xl w-3/4 ' + sectionTheme.description[theme]}>
-                    <MDXRemote {...sectionDescription.mdx} />
+                <div className='w-full lg:w-3/4'>
+                    <div
+                        className={
+                            'font-normal text-2xl mb-8 ' +
+                            sectionTheme.description[theme]
+                        }
+                    >
+                        <MDXRemote {...sectionDescription.mdx} />
+                    </div>
+                    <Button {...ctaButton} />
                 </div>
             </div>
         </section>
