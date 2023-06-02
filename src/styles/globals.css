@@ -19,11 +19,11 @@
     }
 
     h2 {
-        @apply font-bold text-subheading;
+        @apply font-bold text-subheading leading-10;
     }
 
     h3 {
-        @apply font-semibold text-normal-text;
+        @apply font-semibold text-normal-text leading-5;
     }
 
     h4 {
@@ -63,5 +63,9 @@
 
     .footer-contact-title {
         @apply font-semibold;
+    }
+
+    .section-label {
+        @apply text-normal-text font-semibold leading-5;
     }
 }
