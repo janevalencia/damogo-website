@@ -6,7 +6,7 @@ const Hero = ({ hero }) => {
     return (
         <section id='hero' className='relative lg:pt-28 pb-8'>
             {/* Hero content */}
-            <div className='container flex flex-col items-center gap-10 md:flex-row md:justify-between md:gap-20'>
+            <div className='container flex flex-col items-center gap-10 lg:flex-row md:justify-between md:gap-20'>
                 <article className='w-full lg:w-[550px]'>
                     <h1 className='prose-strong:text-primary-green'>
                         <MDXRemote {...hero.title.mdx} />
@@ -27,7 +27,7 @@ const Hero = ({ hero }) => {
                 />
             </div>
             {/* Overlay */}
-            <div className='hidden xl:block absolute bottom-0 right-0 -z-10'>
+            <div className='hidden lg:block absolute bottom-0 right-0 -z-10'>
                 <Image
                     src='/images/hero-rect.png'
                     alt='Overlay'
