@@ -5,6 +5,14 @@ const { fontFamily } = require('tailwindcss/defaultTheme');
 module.exports = {
     content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
     theme: {
+        screens: {
+            xs: '320px', // same as => @media (min-width: 320px) { ... }
+            sm: '640px',
+            md: '768px',
+            lg: '1024px',
+            xl: '1280px',
+            '2xl': '1440px',
+        },
         fontWeight: {
             thin: '300',
             normal: '400',
@@ -33,7 +41,7 @@ module.exports = {
             },
             fontSize: {
                 'lg-title': '4.5rem', // 72px.
-                'subheading': '2.25rem', // 36px.
+                subheading: '2.25rem', // 36px.
                 'normal-text': '1.125rem', // 18px.
                 'small-text': '0.875rem', // 14px.
             },
