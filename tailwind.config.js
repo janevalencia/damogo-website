@@ -37,6 +37,7 @@ module.exports = {
                 'secondary-grey': '#5A5A5A', // Grey Text
                 'secondary-green': '#005844', // Dark Green
                 'gradient-blue': '#DFF4FF', // Light Blue
+                'gradient-yellow': '#FFBB00', // Light Yellow
                 'primary-grey': '#5A5A5A', // Neutral Grey Text
             },
             fontSize: {

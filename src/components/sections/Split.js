@@ -21,8 +21,8 @@ const Split = ({
                             <Image
                                 src={images[0].url}
                                 alt={`${sectionTitle}-image`}
-                                width={274}
-                                height={274}
+                                width={500}
+                                height={525}
                             />
                         </div>
 
@@ -73,7 +73,9 @@ const Split = ({
                             >
                                 {smallHeading}
                             </h3>
-                            <h2 className={sectionTheme.title[theme]}>{sectionTitle}</h2>
+                            <h2 className={sectionTheme.title[theme]}>
+                                {sectionTitle}
+                            </h2>
                         </div>
                         <div
                             className={
