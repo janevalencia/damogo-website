@@ -5,6 +5,7 @@ import Button from '@/components/Button';
 import { sectionTheme } from '@/libs/_theme';
 
 const SplitReversed = ({
+    htmlId,
     smallHeading,
     sectionTitle,
     sectionDescription,
@@ -13,7 +14,7 @@ const SplitReversed = ({
     theme,
 }) => {
     return (
-        <section className={sectionTheme.background[theme]}>
+        <section id={htmlId} className={sectionTheme.background[theme]}>
             <section className='container py-6 lg:pt-16 lg:pb-0'>
                 <div className='flex flex-col items-center gap-4 lg:flex-row lg:justify-between lg:items-end lg:gap-11'>
                     <div className='w-full pb-10 lg:w-3/4'>

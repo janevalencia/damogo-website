@@ -3,13 +3,14 @@ import Image from 'next/image';
 import { sectionTheme } from '@/libs/_theme';
 
 const Stack = ({
+    htmlId,
     smallHeading,
     sectionTitle,
     images,
     theme,
 }) => {
     return (
-        <section className={sectionTheme.background[theme]}>
+        <section id={htmlId} className={sectionTheme.background[theme]}>
             <section className='container py-24'>
                 <h3
                     className={

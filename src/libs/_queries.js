@@ -22,8 +22,8 @@ export const pageQuery = gql`
                 }
             }
             sections {
-                __typename
                 ... on Section {
+                    htmlId
                     smallHeading
                     sectionTitle
                     sectionDescription

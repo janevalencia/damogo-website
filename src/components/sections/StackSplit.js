@@ -5,6 +5,7 @@ import Button from '@/components/Button';
 import { sectionTheme } from '@/libs/_theme';
 
 const StackSplit = ({
+    htmlId,
     smallHeading,
     sectionTitle,
     sectionDescription,
@@ -13,7 +14,7 @@ const StackSplit = ({
     theme,
 }) => {
     return (
-        <section className={sectionTheme.background[theme]}>
+        <section id={htmlId} className={sectionTheme.background[theme]}>
             <section className='container py-24'>
                 <h3
                     className={
