@@ -13,9 +13,10 @@
 
 export const siteConfig = {
     siteMetadata: {
-        title: `Makan Cerdas`,
+        title: `DamoGo`,
         description: `Create Tasty Food, Not Wasty Food.`,
-        author: `@janevalencia`,
-        siteUrl: `https://github.com/janevalencia`,
+        author: `Jane Valencia`,
+        github: `https://github.com/janevalencia`,
+        linkedin: `https://www.linkedin.com/in/janevalencia/`,
     },
 };

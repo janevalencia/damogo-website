@@ -10,8 +10,6 @@ const Footer = () => {
 
     const [activeLang, setActiveLang] = useState('en');
 
-    const siteTitle = siteConfig.siteMetadata.title;
-
     const handleLang = (locale) => {
         // Switch language.
         router.push(router.asPath, router.asPath, { locale: locale.value });
@@ -32,7 +30,7 @@ const Footer = () => {
                 <span>
                     <Image
                         src='/logo.svg'
-                        alt={siteTitle}
+                        alt={siteConfig.siteMetadata.title}
                         width={113}
                         height={25}
                     />
@@ -124,6 +122,32 @@ const Footer = () => {
                             {locale.label} {index === 0 && ' | '}
                         </button>
                     ))}
+                </div>
+
+                {/* Copyright Author/Developer */}
+                <div className='flex flex-col items-end text-sm'>
+                    <p className='font-semibold'>
+                        Copyright &copy; {new Date().getFullYear()} developed by{' '}
+                        {siteConfig.siteMetadata.author}
+                    </p>
+                    <div className='flex flex-row justify-start items-center gap-3'>
+                        <a
+                            href={siteConfig.siteMetadata.github}
+                            target='_blank'
+                            rel='noopener noreferrer'
+                            className='hover:underline'
+                        >
+                            Github
+                        </a>
+                        <a
+                            href={siteConfig.siteMetadata.linkedin}
+                            target='_blank'
+                            rel='noopener noreferrer'
+                            className='hover:underline'
+                        >
+                            LinkedIn
+                        </a>
+                    </div>
                 </div>
             </div>
         </footer>
